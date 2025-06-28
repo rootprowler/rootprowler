@@ -596,6 +596,18 @@ a.about-text:hover {
     padding: 0 1rem;
   }
 
+  .hero-content {
+  width: 100%;
+  overflow: visible;
+}
+
+.hero-content p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding: 0 0.5rem;
+}
+
+
   .terminal-box {
     width: 100%;
     font-size: 0.8rem;
@@ -608,9 +620,20 @@ a.about-text:hover {
     border-radius: 0.75rem;
   }
 
+  .hero-image img {
+  max-width: 90%;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+
   .name-heading {
-    font-size: 1.8rem;
-  }
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  margin-bottom: 0.8rem;
+  word-break: break-word;
+}
+
 
   .section-heading {
     font-size: 1.5rem;
@@ -681,5 +704,99 @@ a.about-text:hover {
     max-width: 100%;
     height: auto;
     margin-top: 1rem;
+  }
+}
+
+/* ============================
+   Terminal Access Button (Fixed Sizing)
+============================ */
+.terminal-access {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 48px;
+  height: 48px;
+  background-color: rgba(0, 255, 0, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 999;
+  transition: 0.3s ease-in-out;
+}
+.terminal-access img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+.terminal-access:hover {
+  background-color: rgba(0, 255, 0, 0.2);
+}
+
+/* ============================
+   Terminal Modal Styles
+============================ */
+.terminal-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+.terminal-modal.active {
+  display: flex;
+}
+.terminal-window {
+  width: 90%;
+  max-width: 700px;
+  background: #0a0a0a;
+  border-radius: 8px;
+  font-family: 'VT323', monospace;
+  color: #00ff00;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+  overflow: hidden;
+}
+.terminal-header {
+  background: #111;
+  padding: 10px;
+  display: flex;
+  gap: 0.5rem;
+}
+.terminal-header .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.terminal-header .red { background: #ff5f56; }
+.terminal-header .yellow { background: #ffbd2e; }
+.terminal-header .green { background: #27c93f; }
+
+.terminal-body {
+  padding: 20px;
+  white-space: pre-wrap;
+  font-size: 16px;
+  line-height: 1.6;
+  background-color: #000;
+}
+
+/* ============================
+   Mobile Specific Fixes
+============================ */
+@media (max-width: 768px) {
+  .terminal-access {
+    width: 40px;
+    height: 40px;
+  }
+  .terminal-access img {
+    width: 20px;
+    height: 20px;
+  }
+  .terminal-window {
+    width: 95%;
+    font-size: 14px;
   }
 }
