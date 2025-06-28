@@ -805,3 +805,19 @@ a.about-text:hover {
     padding-top: 120px; /* adjust if needed based on your header height */
   }
 }
+@media (max-width: 768px) {
+  .terminal-box {
+    transform: scale(0.85);
+    transform-origin: top center;
+    margin-top: 1.5rem;
+  }
+
+  .hero-content {
+    margin-top: 1rem;
+  }
+
+  .name-heading {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+}
