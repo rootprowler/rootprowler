@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Rahul M</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="site-header">
+    <div class="nav-container">
+      <div class="logo">rootprowler</div>
+      <nav class="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="certifications.html">Certifications</a>
+        <a href="contact.html" class="contact-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Projects Section -->
+  <main class="main-content">
+    <section class="about-section">
+      <div class="about-container" data-aos="fade-up">
+        <h2 class="section-heading">Projects</h2>
+
+        <!-- Project 1 -->
+        <div class="project-block">
+          <h3 class="sub-heading">Nmap Scan on DVWA</h3>
+          <p class="about-text">Performed a reconnaissance scan on a vulnerable DVWA instance running on Metasploitable 2.</p>
+          <ul class="styled-list">
+            <li>Identified open ports, services, and OS fingerprinting using <code>nmap -A</code></li>
+            <li>Mapped the attack surface and service versions</li>
+            <li>Analyzed vulnerability exposure using Nmap scripts (NSE)</li>
+            <li>Documented results in markdown report</li>
+          </ul>
+          <a href="https://github.com/rootprowler" class="about-text">🔗 View on GitHub</a>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-block">
+          <h3 class="sub-heading">DVWA Login Brute-Force | Hydra Automation</h3>
+          <p class="about-text">Simulated a real-world brute-force attack on a login page using Hydra with automation.</p>
+          <ul class="styled-list">
+            <li>Targeted DVWA hosted on Metasploitable 2</li>
+            <li>Automated login attempts using a Python wrapper for Hydra</li>
+            <li>Wrote a client-style PDF penetration report</li>
+            <li>Demonstrated ethical use of brute-force techniques</li>
+          </ul>
+          <a href="https://github.com/rootprowler" class="about-text">🔗 View on GitHub</a>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-block">
+          <h3 class="sub-heading">Operation: Mr. Robot Infiltration</h3>
+          <p class="about-text">Full-chain advanced pentest on VulnHub’s Mr. Robot machine from web to root access.</p>
+          <ul class="styled-list">
+            <li>Enumerated WordPress site vulnerabilities</li>
+            <li>Exploited shell upload and escalated to root using local privilege escalation</li>
+            <li>Captured all flags and mapped internal structure</li>
+            <li>Documented full kill chain with screenshots and analysis</li>
+          </ul>
+          <a href="https://github.com/rootprowler" class="about-text">🔗 View on GitHub</a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+</body>
+</html>
