@@ -800,3 +800,8 @@ a.about-text:hover {
     font-size: 14px;
   }
 }
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 120px; /* adjust if needed based on your header height */
+  }
+}
