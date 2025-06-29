@@ -13,13 +13,19 @@
   <!-- Icons (Lucide or Font Awesome Minimal) -->
   <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body>
+<body class="subpage">
 
   <!-- Navigation -->
   <header class="site-header">
     <div class="nav-container">
       <div class="logo">rootprowler</div>
-      <nav class="nav-menu">
+
+      <!-- ✅ Hamburger Button -->
+      <button class="hamburger" id="hamburgerBtn">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-menu" id="navMenu">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="projects.html">Projects</a>
@@ -55,6 +61,7 @@
   <!-- Scripts -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>AOS.init();</script>
+  <script src="assets/js/main.js"></script> <!-- ✅ Added for toggle functionality -->
   <script>
     lucide.createIcons();
   </script>
