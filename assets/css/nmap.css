@@ -1,0 +1,97 @@
+/* nmap.css */
+body {
+  background-color: #000;
+  color: #0f0;
+  font-family: 'Ubuntu Mono', monospace;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.terminal-top {
+  padding: 2rem;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.ascii {
+  color: white;
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  word-wrap: break-word;
+}
+
+.line {
+  white-space: pre-wrap;
+  margin: 0.2rem 0;
+}
+
+.prompt::before {
+  content: "root@nmap:~$ ";
+  color: #00ff00;
+}
+
+a.command-link {
+  color: #00ffff;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.2rem 0;
+}
+
+a.command-link:hover {
+  text-decoration: underline;
+  color: #0ff;
+}
+
+.terminal-wrapper {
+  padding: 2rem;
+  height: calc(100vh - 350px);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.terminal-output {
+  flex-grow: 1;
+  white-space: pre-wrap;
+  overflow-y: auto;
+  margin-bottom: 1rem;
+  word-wrap: break-word;
+}
+
+.terminal-input-line {
+  display: flex;
+  align-items: center;
+}
+
+.terminal-prompt {
+  color: #0f0;
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+#terminal-input {
+  background: transparent;
+  border: none;
+  color: #0f0;
+  font-size: 1.2rem;
+  font-family: 'Ubuntu Mono', monospace;
+  flex-grow: 1;
+  outline: none;
+}
+
+@media screen and (max-width: 600px) {
+  .ascii {
+    font-size: 0.8rem;
+  }
+  .terminal-wrapper {
+    padding: 1rem;
+  }
+  .terminal-top {
+    padding: 1rem;
+  }
+  .terminal-prompt, #terminal-input {
+    font-size: 1rem;
+  }
+}

@@ -2,33 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>RootProwler Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RootProwler – Cybersecurity Portfolio</title>
 
-  <!-- Google Fonts -->
+  <!-- Aeonik & VT323 Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 
-  <!-- AOS (Animate On Scroll) -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- AOS Scroll Animations -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 
-  <!-- Stylesheet -->
+  <!-- Styles -->
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
 
-  <!-- Navigation Bar -->
+<!-- Header -->
 <header class="site-header">
   <div class="nav-container">
     <div class="logo">rootprowler</div>
-
-    <!-- Hamburger Icon -->
     <button class="hamburger" id="hamburgerBtn">
       <span></span><span></span><span></span>
     </button>
-
-    <!-- Nav Links -->
     <nav class="nav-menu" id="navMenu">
-      <a href="index.html">Home</a>
+      <a href="index.html" class="active">Home</a>
       <a href="about.html">About</a>
       <a href="projects.html">Projects</a>
       <a href="certifications.html">Certifications</a>
@@ -37,42 +33,34 @@
   </div>
 </header>
 
+<!-- Hero Section -->
+<section class="hero">
+  <div class="grid-bg"></div>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="grid-bg"></div>
+  <div class="hero-content" data-aos="fade-up">
+    <h1 class="name-heading">Rahul M – Cybersecurity Analyst</h1>
+    <p>
+      Passionate about offensive security, AI automation, and deep recon. I specialize in web app pentesting, red teaming, and vulnerability research.
+    </p>
 
-    <div class="hero-content" data-aos="fade-up">
-      <h1 class="name-heading">Rahul M – Cybersecurity Analyst</h1>
-      <p>Passionate about offensive security, AI automation, and deep recon. I specialize in web app pentesting, red teaming, and vulnerability research.</p>
-
-      <div class="terminal-box">
-        <div class="terminal-header">
-          <span class="dot red"></span>
-          <span class="dot yellow"></span>
-          <span class="dot green"></span>
-        </div>
-        <div class="terminal-body">
-          <span class="terminal-text"></span>
-        </div>
+    <div class="terminal-box">
+      <div class="terminal-header">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+      </div>
+      <div class="terminal-body">
+        <span class="terminal-text"></span>
       </div>
     </div>
+  </div>
 
-    <div class="hero-image" data-aos="fade-left">
-      <img src="assets/images/photo.png" alt="Rahul Portrait">
-    </div>
-  </section>
+  <div class="hero-image" data-aos="fade-left">
+    <img src="assets/images/photo.png" alt="Rahul Portrait" />
+  </div>
+</section>
 
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="assets/js/main.js"></script>
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <script>
-    AOS.init();
-    lucide.createIcons();
-  </script>
- <!-- Terminal Button -->
+<!-- Terminal Modal Access Button -->
 <div class="terminal-access" id="terminalBtn">
   <img src="assets/images/terminal-icon.svg" alt="Access Console" />
 </div>
@@ -88,6 +76,7 @@
     <div class="terminal-body" id="terminalOutput"></div>
   </div>
 </div>
+
 <!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

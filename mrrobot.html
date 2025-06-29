@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Operation: Mr. Robot Infiltration</title>
+
+  <!-- Ubuntu Mono Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+
+  <!-- Typewriter Library -->
+  <script src="https://cdn.jsdelivr.net/npm/typeit@8.0.3/dist/typeit.min.js"></script>
+
+  <link rel="stylesheet" href="assets/css/mrrobot.css">
+</head>
+
+<body>
+  <div class="terminal-top">
+    <div class="ascii">
+      ____  ____   ___   ____ ___   ____ ___  ____ _____ ____<br>
+     |  _ \|  _ \ / _ \ / ___/ _ \ / ___/ _ \|  _ \ ____|  _ \<br>
+     | |_) | |_) | | | | |  | | | | |  | | | | |_) |  _| | |_) |<br>
+     |  _ <|  _ <| |_| | |__| |_| | |__| |_| |  _ <| |___|  __/<br>
+     |_| \_\_| \_\\___/ \____\___/ \____\___/|_| \_\_____|_|
+    </div>
+
+    <div class="line">Welcome, friend...</div>
+    <div id="type-sequence"></div>
+
+    <br />
+    <div class="line">
+      <span class="prompt">root@fsociety:~#</span> <a class="command-link" href="#prepare">prepare</a>
+    </div>
+    <div class="line">
+      <span class="prompt">root@fsociety:~#</span> <a class="command-link" href="#fsociety">f-society</a>
+    </div>
+    <div class="line">
+      <span class="prompt">root@fsociety:~#</span> <a class="command-link" href="#inform">inform</a>
+    </div>
+    <div class="line">
+      <span class="prompt">root@fsociety:~#</span> <a class="command-link" href="#question">question</a>
+    </div>
+    <div class="line">
+      <span class="prompt">root@fsociety:~#</span> <a class="command-link" href="#wake-up">wake-up</a>
+    </div>
+    <div class="line">
+      <span class="prompt">root@fsociety:~#</span> <a class="command-link" href="#join">join</a>
+    </div>
+  </div>
+
+  <div class="terminal-wrapper">
+    <div class="terminal-output" id="terminal-output"></div>
+    <div class="terminal-input-line">
+      <span class="terminal-prompt">root@fsociety:~#</span>
+      <input type="text" id="terminal-input" autofocus autocomplete="off" />
+    </div>
+  </div>
+
+  <script>
+    new TypeIt("#type-sequence", {
+      speed: 35,
+      waitUntilVisible: true
+    })
+      .type("Hello friend...\n")
+      .pause(500)
+      .type("You've come for a reason.\n")
+      .pause(500)
+      .type("You may not be able to explain it yet, but you're tired. Tired of being told where to work, who to love, and how to think.\n")
+      .pause(500)
+      .type("Even this very terminal is a gateway, a chance.\n")
+      .pause(500)
+      .type("Type a command and see what lies beneath.")
+      .go();
+  </script>
+
+  <script src="assets/js/mrrobot.js"></script>
+</body>
+
+</html>

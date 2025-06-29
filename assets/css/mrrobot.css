@@ -1,0 +1,73 @@
+body {
+  background-color: #000;
+  color: #0f0;
+  font-family: 'Ubuntu Mono', monospace;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.terminal-top {
+  padding: 2rem;
+  text-align: left;
+}
+
+.terminal-wrapper {
+  padding: 2rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.terminal-output {
+  flex-grow: 1;
+  white-space: pre-wrap;
+  overflow-y: auto;
+  margin-bottom: 1rem;
+}
+
+.terminal-input-line {
+  display: flex;
+  align-items: center;
+}
+
+.terminal-prompt {
+  color: #0f0;
+  margin-right: 0.5rem;
+}
+
+#terminal-input {
+  background: transparent;
+  border: none;
+  color: #0f0;
+  font-size: 1.2rem;
+  font-family: 'Ubuntu Mono', monospace;
+  flex-grow: 1;
+  outline: none;
+}
+
+/* Same update wherever font-family is declared */
+
+.ascii {
+  color: white;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.line {
+  white-space: pre;
+}
+
+.prompt::before {
+  content: "root@fsociety:~$ ";
+  color: #00ff00;
+}
+
+a.command-link {
+  color: #0ff;
+  text-decoration: none;
+}
+
+a.command-link:hover {
+  text-decoration: underline;
+}

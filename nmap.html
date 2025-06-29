@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nmap Scan on DVWA</title>
+
+  <!-- Ubuntu Mono Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+
+  <!-- Typewriter Effect -->
+  <script src="https://cdn.jsdelivr.net/npm/typeit@8.0.3/dist/typeit.min.js"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/nmap.css">
+</head>
+
+<body>
+  <!-- Terminal Top -->
+  <div class="terminal-top">
+    <div class="ascii">
+      _   _ _   _ __  __          ___   ___  ____  __  __    <br>
+     | \ | | \ | |  \/  |   /\   / _ \ / _ \|  _ \|  \/  |   <br>
+     |  \| |  \| | |\/| |  /  \ | | | | | | | |_) | |\/| |   <br>
+     | |\  | |\  | |  | | / /\ \| |_| | |_| |  _ <| |  | |   <br>
+     |_| \_|_| \_|_|  |_|/_/  \_\\___/ \___/|_| \_\_|  |_|   <br>
+    </div>
+
+    <div class="line">Initializing Nmap scan results interface...</div>
+    <div id="type-sequence"></div>
+
+    <br />
+    <div class="line prompt"><a class="command-link" href="#" onclick="injectCommand('summary')">summary</a></div>
+    <div class="line prompt"><a class="command-link" href="#" onclick="injectCommand('scan')">scan</a></div>
+    <div class="line prompt"><a class="command-link" href="#" onclick="injectCommand('tools')">tools</a></div>
+    <div class="line prompt"><a class="command-link" href="#" onclick="injectCommand('github')">github</a></div>
+    <div class="line prompt"><a class="command-link" href="#" onclick="injectCommand('help')">help</a></div>
+  </div>
+
+  <!-- Terminal Interface -->
+  <div class="terminal-wrapper">
+    <div class="terminal-output" id="terminal-output"></div>
+    <div class="terminal-input-line">
+      <span class="terminal-prompt">root@nmap:~#</span>
+      <input type="text" id="terminal-input" autofocus autocomplete="off" />
+    </div>
+  </div>
+
+  <!-- Typewriter Intro -->
+  <script>
+    new TypeIt("#type-sequence", {
+      speed: 40,
+      waitUntilVisible: true
+    })
+      .type("Welcome to the Nmap Project Showcase\n")
+      .pause(500)
+      .type("This project performs a network scan on DVWA using Nmap\n")
+      .pause(500)
+      .type("Explore the summary, scan output, and tools used.\n")
+      .go();
+  </script>
+
+  <!-- Command Functionality -->
+  <script src="assets/js/nmap.js"></script>
+  <script>
+    function injectCommand(cmd) {
+      const input = document.getElementById("terminal-input");
+      input.value = cmd;
+      const e = new KeyboardEvent('keydown', { key: 'Enter' });
+      input.dispatchEvent(e);
+    }
+  </script>
+</body>
+</html>
