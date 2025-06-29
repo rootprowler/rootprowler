@@ -557,3 +557,150 @@ body::before, body::after {
   padding: 1rem 2rem;
   transition: top 0.3s ease; /* ← Add this line */
 }
+/* ====================
+   MOBILE FIXES & SCALING
+==================== */
+@media (max-width: 768px) {
+  html {
+    font-size: 95%;
+  }
+
+  .hero {
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 6rem;
+    background: linear-gradient(to bottom, #0d0d0d, #1a1a1a);
+    text-align: center;
+  }
+
+  .hero-content {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    color: #ddd;
+  }
+
+  .name-heading {
+    font-size: 2rem;
+  }
+
+  .terminal-box {
+    font-size: 0.9rem;
+    margin: 1rem auto;
+  }
+
+  .terminal-access {
+    width: 40px;
+    height: 40px;
+    bottom: 16px;
+    right: 16px;
+  }
+
+  .terminal-access img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .terminal-window {
+    width: 95%;
+    font-size: 14px;
+  }
+
+  .main-content {
+    padding: 2rem 1rem;
+  }
+
+  .section-heading {
+    font-size: 1.8rem;
+  }
+
+  .about-text,
+  .project-card p,
+  .contact-list li,
+  .contact-list li a {
+    color: #eee !important;
+    font-size: 1rem !important;
+  }
+
+  .project-grid {
+    gap: 1.2rem !important;
+    padding: 0 1rem;
+  }
+
+  .project-card {
+    padding: 1rem;
+  }
+
+  .project-card h3 {
+    font-size: 1rem !important;
+  }
+
+  .project-card p {
+    font-size: 0.85rem !important;
+  }
+}
+
+/* ====================
+   HAMBURGER MENU
+==================== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1002;
+}
+
+.hamburger span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: white;
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #111;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+    z-index: 999;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu a {
+    padding: 0.8rem;
+    font-size: 1rem;
+    color: #fff;
+  }
+}
+
+/* ====================
+   CLEAR BODY PSEUDO DOT
+==================== */
+body::before,
+body::after {
+  content: none !important;
+  display: none !important;
+}
+
