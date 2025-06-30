@@ -77,27 +77,24 @@ window.addEventListener("DOMContentLoaded", () => {
 
   // ✅ Hamburger Menu Toggle
   const hamburgerBtn = document.getElementById("hamburgerBtn");
-  const navMenu = document.getElementById("navMenu");
+const navMenu = document.getElementById("navMenu");
 
-  if (hamburgerBtn && navMenu) {
-    hamburgerBtn.addEventListener("click", () => {
-      navMenu.classList.toggle("active");
-    });
-  }
-
-  // ✅ Close mobile nav on link click
-  document.querySelectorAll('.nav-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-      const navMenu = document.getElementById('navMenu');
-      if (navMenu.classList.contains('active')) {
-        navMenu.classList.remove('active');
-      }
-    });
+if (hamburgerBtn && navMenu) {
+  hamburgerBtn.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
   });
 
-  // ✅ Header hide on scroll
-  const header = document.querySelector('.site-header');
-  let lastScroll = 0;
+  // Close nav when a link is clicked (mobile UX)
+  navMenu.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      navMenu.classList.remove("active");
+    });
+  });
+}
+
+// ✅ Header hide on scroll
+const header = document.querySelector('.site-header');
+let lastScroll = 0;
 
   window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
